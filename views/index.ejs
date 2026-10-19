@@ -22,6 +22,9 @@
     <h1 id="countryName">
       <%= question.country %>
     </h1>
+    <!-- État du jeu transmis au serveur à chaque réponse -->
+    <input type="hidden" name="country" value="<%= question.country %>">
+    <input type="hidden" name="score" value="<%= locals.totalScore || 0 %>">
     <div class="answer-container">
       <input type="text" name="answer" id="userInput" placeholder="Enter the capital" autofocus autocomplete="off">
     </div>
